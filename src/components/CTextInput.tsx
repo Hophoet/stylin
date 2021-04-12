@@ -18,7 +18,11 @@ const CTextInput = ({icon, label, onChangeText, keyboardType, autoFocus, placeho
 					selectionColor={(selectionColor)?selectionColor:'white'}
 					style={[styles.textInput, textInputStyle]}
 					placeholder={placeholder}
-					onChangeText={(text)=>onChangeText(text)}
+					onChangeText={(text)=>{
+						if(onChangeText){
+							onChangeText(text)
+						}
+					}}
 				/>
 			</View>
 		</View> 
