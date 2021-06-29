@@ -3,7 +3,7 @@ import {TextInput, Image, ScrollView, FlatList, Text, View, StyleSheet, Touchabl
 import Indicator from './PresentationIndicator';
 
 
-const OnbordingItem = ({item, it,  index, scrollX, currentIndex}:any) => {
+const OnbordingItem = ({item, it,  index, scrollX, currentIndex, navigateTo}:any) => {
 
 	return(
 		<View style={styles.container}>
@@ -20,7 +20,10 @@ const OnbordingItem = ({item, it,  index, scrollX, currentIndex}:any) => {
 				{ index == 3 &&
 					<TouchableOpacity 
 						activeOpacity={.5}
-						style={styles.button}>
+						style={styles.button}
+						onPress={()=>{ navigateTo('Register')}}
+						
+					>
 						<Text style={styles.buttonLabel}>Connexion</Text>
 					</TouchableOpacity>
 				}
