@@ -5,7 +5,7 @@ import data from './data';
 import Item from '../../components/PresentationItem';
 
 
-const Main = () => {
+const Presentation = ({navigation}:any) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const scrollX = useRef(new Animated.Value(0)).current;
 	const viewableItemsChanged = useRef(({ viewableItems }) => {
@@ -14,12 +14,21 @@ const Main = () => {
 	}).current;
 	const viewConfig = useRef({ viewAreaCoveragePercentThreshold:50}).current;
 
+	const navigateTo = (screen:string, data:any) => {
+		navigation.navigate(screen, data);
+	}
+
 	return(
 		<View style={styles.container}>
 
 			<FlatList
   				data={data}
-                renderItem={({index, item}) => <Item currentIndex={currentIndex} scrollX={scrollX} index={index} item={item}/>}
+                renderItem={({index, item}) => <Item 
+					currentIndex={currentIndex} 
+					scrollX={scrollX} 
+					navigateTo={navigateTo}
+					index={index} 
+					item={item}/>}
 				horizontal
 				showsHorizontalScrollIndicator={false}
 				pagingEnabled
@@ -35,7 +44,7 @@ const Main = () => {
 	)
 
 }
-export default Main;
+export default Presentation;
 
 const styles = StyleSheet.create({
 	container:{
