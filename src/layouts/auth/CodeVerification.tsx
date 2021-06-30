@@ -13,7 +13,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import PhoneInput from "react-native-phone-number-input";
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 
-import { bgLinearGradient} from '../../assets/fonts/main';
+import { bgLinearGradient} from '../../assets/colors/main';
 
 
 const CodeVerification = () => {
