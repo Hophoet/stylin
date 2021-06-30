@@ -2,15 +2,19 @@ import React, { useState, useRef } from "react";
 import {
   SafeAreaView,
   StyleSheet,
+  Dimensions,
   View,
   StatusBar,
   TouchableOpacity,
-  Text,
 } from "react-native";
+import LinearGradient from 'react-native-linear-gradient';
 import PhoneInput from "react-native-phone-number-input";
+import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+
+import { bgLinearGradient} from '../../assets/colors/main';
 
 
-const Register = () => {
+const Register = ({navigation}:any) => {
 
   const [value, setValue] = useState("");
   const [formattedValue, setFormattedValue] = useState("");
@@ -19,11 +23,14 @@ const Register = () => {
   const phoneInput = useRef<PhoneInput>(null);
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar backgroundColor={bgLinearGradient.top} barStyle="dark-content" />
       <View style={styles.container}>
-        <SafeAreaView style={styles.wrapper}>
+			  <LinearGradient 
+          colors={[bgLinearGradient.top, bgLinearGradient.bottom]} 
+          style={styles.linearGradient}>
           <PhoneInput
             ref={phoneInput}
+            containerStyle={styles.phoneInputContainer}
             defaultValue={value}
             defaultCode="TG"
             layout="first"
@@ -46,10 +53,13 @@ const Register = () => {
                 ?styles.activeButton
                 :styles.notActiveButton
             ]}
+            onPress={()=>{
+              navigation.navigate('CodeVerification');
+            }}
           >
             <Text style={styles.buttonLabel}>continuer</Text>
           </TouchableOpacity>
-        </SafeAreaView>
+			</LinearGradient>
       </View>
     </>
   );
@@ -57,19 +67,28 @@ const Register = () => {
 }
 export default Register;
 
+
+const {width, height} = Dimensions.get('window');
+
 const styles = StyleSheet.create({
 	container:{
 		flex:1,
-        justifyContent:'center',
-        alignItems:'center',
 	},
+  linearGradient:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+
+  },
     activeButton:{
-		backgroundColor:'#111',
+        minWidth:width/1.2,
+		    backgroundColor:'#111',
         marginVertical:10,
         padding:10,
     },
     notActiveButton:{
-		backgroundColor:'#1111',
+        minWidth:width/1.2,
+		    backgroundColor:'#1111',
         marginVertical:10,
         padding:10,
     },
@@ -79,5 +98,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         textAlign:'center',
         fontSize:20,
+    },
+    phoneInputContainer:{
+      minWidth:width/1.2,
     }
 })
