@@ -16,7 +16,7 @@ import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 import { bgLinearGradient} from '../../assets/colors/main';
 
 
-const CodeVerification = () => {
+const CodeVerification = ({navigation}:any) => {
 
   const [code, setCode] = useState("");
   const [valid, setValid] = useState(false);
@@ -50,9 +50,15 @@ const CodeVerification = () => {
                 
             </View>
           <TouchableOpacity
+            disabled={code.length < 4}
             style={[
-                styles.activeButton
+                (code.length == 4)
+                ?styles.activeButton
+                :styles.notActiveButton
             ]}
+            onPress={()=> {
+                navigation.navigate('Main');
+            }}
           >
             <Text style={styles.buttonLabel}>verifier</Text>
           </TouchableOpacity>
