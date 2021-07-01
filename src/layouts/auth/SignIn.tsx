@@ -15,6 +15,9 @@ const SignIn = ({navigation}:any) => {
 	const navigateToSignUp = ()=>{
 		navigation.navigate('SignUp')
 	}
+	const navigateToResetPassword = ()=>{
+		navigation.navigate('ResetPassword')
+	}
 
 	return(
 		<View style={styles.container}>
@@ -56,6 +59,7 @@ const SignIn = ({navigation}:any) => {
 						</TouchableOpacity>
 						<TouchableOpacity 
 							style={styles.formBottomFirstButton}
+							onPress={navigateToResetPassword}
 						>
 							<Text style={styles.formBottomFirstLabel}>Forget Password ?</Text>
 						</TouchableOpacity>
