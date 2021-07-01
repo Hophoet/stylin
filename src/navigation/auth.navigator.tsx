@@ -5,6 +5,7 @@ import Presentation2 from '../layouts/presentation/Presentation2';
 import Splash from '../layouts/splash/Splash';
 import SignIn from '../layouts/auth/SignIn';
 import SignUp from '../layouts/auth/SignUp';
+import ResetPassword from '../layouts/auth/ResetPassword';
 
 const Stack = createStackNavigator();
 
@@ -15,5 +16,6 @@ export const AuthNavigator = (): React.ReactElement => (
     <Stack.Screen name='Presentation2' component={Presentation2}/>
     <Stack.Screen name='SignIn' component={SignIn}/>
     <Stack.Screen name='SignUp' component={SignUp}/>
+    <Stack.Screen name='ResetPassword' component={ResetPassword}/>
   </Stack.Navigator>
 );
