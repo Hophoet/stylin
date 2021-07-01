@@ -1,13 +1,19 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Presentation from '../layouts/presentation/Presentation';
-import Register from '../layouts/auth/Register';
+import Presentation1 from '../layouts/presentation/Presentation1';
+import Presentation2 from '../layouts/presentation/Presentation2';
+import Splash from '../layouts/splash/Splash';
+import SignIn from '../layouts/auth/SignIn';
+import SignUp from '../layouts/auth/SignUp';
 
 const Stack = createStackNavigator();
 
 export const AuthNavigator = (): React.ReactElement => (
   <Stack.Navigator headerMode='none'>
-    <Stack.Screen name='Presentation' component={Presentation}/>
-    <Stack.Screen name='Register' component={Register}/>
+    <Stack.Screen name='Splash' component={Splash}/>
+    <Stack.Screen name='Presentation1' component={Presentation1}/>
+    <Stack.Screen name='Presentation2' component={Presentation2}/>
+    <Stack.Screen name='SignIn' component={SignIn}/>
+    <Stack.Screen name='SignUp' component={SignUp}/>
   </Stack.Navigator>
 );
