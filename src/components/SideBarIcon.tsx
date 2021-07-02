@@ -24,7 +24,10 @@ const SideBarIcon = ({item, activeMenu, setActiveMenu}:any) => {
 					:styles.buttonContainer}>
 				<Icon 
 					name={item.icon} 
-					size={30} 
+					size={(isActiveMenu())
+						?30
+						:20
+					} 
 					color={(isActiveMenu())
 						?sideBarLinearGradient.top
 						:'black' 
@@ -50,8 +53,8 @@ const styles = StyleSheet.create({
 	buttonContainer:{
 		backgroundColor:'white',
 		borderRadius:width/2,
-		width:width/8,
-		height:width/8,
+		width:width/9,
+		height:width/9,
 		justifyContent:'center',
 		alignItems:'center',
 		elevation:10,
