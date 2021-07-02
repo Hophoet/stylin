@@ -13,9 +13,11 @@ export const Nav = (): React.ReactElement => (
   </Stack.Navigator>
 );
 
+import MainNavigator from './main.navigator'
+
 const Navigator = (): React.ReactElement => (
     <NavigationContainer>
-        <Nav/>
+        <MainNavigator/>
     </NavigationContainer>
 );
 
