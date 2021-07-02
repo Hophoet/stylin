@@ -6,48 +6,44 @@ import CButton from '../../components/CButton';
 import CTextInput from '../../components/CTextInput';
 
 const ResetPassword = ({navigation}:any) => {
-	const navigateBack = ()=>{
-		navigation.goBack()
+	const navigateToVerify = ()=>{
+		navigation.navigate('ResetPasswordVerify')
 	}
 
 	return(
 		<View style={styles.container}>
-			<ImageBackground
-				source={require('../../assets/images/bg3.jpg')}
-				style={styles.imageBackground}
-				blurRadius={2}
-				resizeMode='cover'
-			>
 				<ScrollView style={styles.scrollViewContainer}>
 				<View style={styles.row1}>
 					<Text style={styles.row1AppName}>Styl<Text style={styles.row1In}>In</Text></Text>
-					<Text style={styles.row1Title}>Reset your account</Text>
-					<Text style={styles.row1Title2}>Enter your email to continue</Text>
+					<Text style={styles.row1Title}>Forget Password?</Text>
+					<Text style={styles.row1Title2}>Enter your email to avoid us to send you a code to your email to verify your account</Text>
 				</View>
 				<View style={styles.row2}>
 					<View style={styles.textInputsContainer}>
 						<View style={styles.textInputContainer}>
 							<CTextInput
 								icon='mail'	
+								iconColor='black'  
 								placeholder='Email'
+								selectionColor='black'
+								placeholderTextColor='black'
+								textInputStyle={{color:'black'}}
+								textInputContainerStyle={{borderBottomColor:'black'}}
 							/>
 						</View>
 					</View>
 					<View style={styles.formBottomContainer}>
 					</View>
 					<CButton 
+						onPress={navigateToVerify}
 						iconPosition='right'
-						label='Continue'
+						label='Send'
+						buttonStyle={{backgroundColor:'black'}}
+						textStyle={{color:'white'}}
 					/>
-					<TouchableOpacity 
-						onPress={navigateBack}	
-					>
-						<Text style={styles.footerLabel}><Text style={styles.footerLabelRight}>Go Back</Text></Text>
-					</TouchableOpacity>
 
 				</View>
 				</ScrollView>
-			</ImageBackground>
 		</View>
 	)
 
@@ -58,6 +54,8 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
 	container:{
 		flex:1,
+		backgroundColor:'white',
+		paddingHorizontal:width/10,
 		//backgroundColor:'#6C63FF'
 	},
 	scrollViewContainer:{
@@ -65,24 +63,24 @@ const styles = StyleSheet.create({
 	},
 	row1AppName:{
 		fontSize:50,
-		color:'white',
-		fontWeight:'bold',
+		color:'black',
 	},
 	row1Title:{
 		fontSize:30,
-		color:'white',
+		fontWeight:'bold',
+		color:'black',
 	},
 	row1Title2:{
-		fontSize:20,
-		color:'white',
+		fontSize:14,
+		color:'black',
 	},
 	row1In:{
-		color:'white',
+		color:'black',
 		fontWeight:'bold',
 	},
 	row1Description:{
 		color:'white',
-		fontSize:22,
+		fontSize:14,
 	},
 	imageBackground:{
 		flex:1,
@@ -120,14 +118,14 @@ const styles = StyleSheet.create({
 		
 	},
 	formBottomFirstLabel:{
-		color:'white',	
+		color:'black',	
 	},
 	formBottomFirstButton:{
 		flexDirection:'row',
 		alignItems:'center',
 	},
 	footerLabel:{
-		color:'white',
+		color:'black',
 	},
 	footerLabelRight:{
 		fontWeight:'bold',
