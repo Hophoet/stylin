@@ -38,7 +38,7 @@ const ResetPasswordVerify = ({navigation}:any) => {
 						<TouchableOpacity 
 							onPress={navigateToPasswordReset}	
 						>
-							<Text style={styles.footerLabel}>Don't receive the code, <Text style={styles.footerLabelRight}>send again?</Text></Text>
+							<Text style={styles.footerLabel}>Don't receive the code? <Text style={styles.footerLabelRight}>send again</Text></Text>
 						</TouchableOpacity>
 					</View>
 
