@@ -3,17 +3,20 @@ import {TextInput, View, StyleSheet, Dimensions} from 'react-native'
 import Icon from "react-native-vector-icons/Ionicons";
 
 
-const CTextInput = ({icon, textInputStyle, placeholder}:any) => {
+const CTextInput = ({icon, keyboardType, autoFocus, placeholderTextColor, selectionColor, iconColor, textInputStyle, textInputContainerStyle, placeholder}:any) => {
 	return(
 		<View style={styles.container}>
-			<View style={styles.textInputContainer}>
+			<View style={[styles.textInputContainer, textInputContainerStyle]}>
 				{ icon &&
-					<Icon size={30} name={icon} color='white' />
+					<Icon size={30} name={icon} color={(iconColor)?iconColor:'white'}/>
+
 				}
 				<TextInput
-					placeholderTextColor='white'
-					selectionColor='white'
-					style={styles.textInput}
+					keyboardType={(keyboardType)?keyboardType:'default'}
+					autoFocus={autoFocus}
+					placeholderTextColor={(placeholderTextColor)?placeholderTextColor:'white'}
+					selectionColor={(selectionColor)?selectionColor:'white'}
+					style={[styles.textInput, textInputStyle]}
 					placeholder={placeholder}
 				/>
 			</View>
@@ -30,6 +33,7 @@ const styles = StyleSheet.create({
 	textInput:{
 		color:'white',
 		fontSize:14,
+
 	},
 	textInputContainer:{
 		flexDirection:'row',
