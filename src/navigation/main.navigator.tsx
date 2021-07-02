@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import Main from '../layouts/main/Main'
-import Transfer from '../layouts/main/Transfer';
-
-const Stack = createStackNavigator();
-
-export const MainNavigator = (): React.ReactElement => (
-  <Stack.Navigator headerMode='none'>
-    <Stack.Screen name='Main' component={Main}/>
-    <Stack.Screen name='Transfer' component={Transfer}/>
-  </Stack.Navigator>
-);
-=======
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -57,4 +42,3 @@ const Nav = (): React.ReactElement => (
   </Stack.Navigator>
 )
 export default Nav;
->>>>>>> c107f8baefd2880f9a85bc48e71312e5a77633db
