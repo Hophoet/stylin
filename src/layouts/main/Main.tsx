@@ -17,12 +17,13 @@ import { bgLinearGradient} from '../../assets/colors/main';
 import SideBar from '../../components/SideBar';
 import Home from './Home';
 import Profile from './Profile';
+import Transfer from './Transfer';
 
 const icons = [
     {id:1, icon:'home', component:<Home/>},
     {id:2, icon:'settings', component:null},
     {id:3, icon:'heart', component:null},
-    {id:4, icon:'card', component:null},
+    {id:4, icon:'card', component:<Transfer/>},
     {id:5, icon:'person', component:<Profile/>},
 ]
 
@@ -67,9 +68,7 @@ const Main = ({navigation}:any) => {
 					  <View 
 					  	style={styles.screenContainer}
 						>
-							<ScrollView>
 								{activeMenu.component}
-							</ScrollView>
 							  
 						</View>
 			
