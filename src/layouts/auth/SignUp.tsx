@@ -16,6 +16,10 @@ const SignUp = ({navigation}:any) => {
 		navigation.navigate('SignIn')
 	}
 
+	const navigateToHome = ()=>{
+		navigation.navigate('App')
+	}
+
 	return(
 		<View style={styles.container}>
 			<ImageBackground
@@ -65,6 +69,7 @@ const SignUp = ({navigation}:any) => {
 					<CButton 
 						iconPosition='left'
 						label='Sign Up'
+						onPress={navigateToHome}	
 						icon='mail'
 					/>
 					<CButton 

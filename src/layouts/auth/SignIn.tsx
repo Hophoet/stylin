@@ -19,6 +19,10 @@ const SignIn = ({navigation}:any) => {
 		navigation.navigate('ResetPassword')
 	}
 
+	const navigateToHome = ()=>{
+		navigation.navigate('App')
+	}
+
 	return(
 		<View style={styles.container}>
 			<ImageBackground
@@ -65,6 +69,7 @@ const SignIn = ({navigation}:any) => {
 						</TouchableOpacity>
 					</View>
 					<CButton 
+						onPress={navigateToHome}	
 						iconPosition='right'
 						label='Sign In'
 					/>
