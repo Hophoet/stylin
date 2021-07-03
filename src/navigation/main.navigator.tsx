@@ -12,6 +12,7 @@ import Shipping from '../layouts/main/Shipping';
 import Payment from '../layouts/main/Payment';
 import DoneOrder from '../layouts/main/DoneOrder';
 import Favorite from '../layouts/main/Favorite';
+import Profile from '../layouts/main/Profile';
 
 
 function HomeScreen() {
@@ -83,7 +84,7 @@ const Tab = createBottomTabNavigator();
 		 />
 		<Tab.Screen
 			name="Profile" 
-			component={HomeScreen}
+			component={Profile}
 			
 			options = {{
 				tabBarLabel:'Profile',
