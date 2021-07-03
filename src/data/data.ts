@@ -23,6 +23,14 @@ const productSizes = [
     { id:5, size:'X'},
 ]
 
+const profileActionButtons = [
+    { id:1, name:'My Order'},
+    { id:2, name:'My Cards'},
+    { id:3, name:'Payments'},
+    { id:5, name:'Change Email & Password'},
+]
+
+
 const products = [
     {id:1, name:'Black Shirt', caracteristics:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis facilis qui nobis provident accusamus officia aspernatur natus dicta, perferendis temporibus rem nesciunt odit! Sit dolores mollitia libero? Dolores, assumenda explicabo?', price:49, isFavorite:true, image:require('../assets/images/bg1.jpg')},
     {id:2, name:'Black Shirt', caracteristics:'kjdf ldfjlsdfjsldfjs flsdfjlsfjsldfjskldfs dfslfjksldf sdfk', price:49, isFavorite:true, image:require('../assets/images/bg4.jpg')},
@@ -38,4 +46,5 @@ export {
     products,
     productColors,
     productSizes,
+    profileActionButtons
 }
