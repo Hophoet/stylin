@@ -48,7 +48,7 @@ const Payment = ({navigation}:any) => {
         </View>
       <View style={styles.row3}>
               <CButton 
-                  onPress={()=>{}}
+                  onPress={()=>{navigation.navigate('DoneOrder')}}
                   label='pay'
                   textStyle={{color:'white'}}
                   buttonStyle={{backgroundColor:'black'}}/>
