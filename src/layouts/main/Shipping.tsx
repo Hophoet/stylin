@@ -86,7 +86,7 @@ const Shipping = ({navigation}:any) => {
         </View>
       <View style={styles.row3}>
               <CButton 
-                  onPress={()=>{}}
+                  onPress={()=>{navigation.navigate('Payment')}}
                   label='Continue to pay'
                   textStyle={{color:'white'}}
                   buttonStyle={{backgroundColor:'black'}}/>
