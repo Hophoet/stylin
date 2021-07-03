@@ -10,6 +10,7 @@ import ProductDetail from '../layouts/main/ProductDetail'
 import Cart from '../layouts/main/Cart';
 import Shipping from '../layouts/main/Shipping';
 import Payment from '../layouts/main/Payment';
+import DoneOrder from '../layouts/main/DoneOrder';
 
 
 function HomeScreen() {
@@ -124,6 +125,9 @@ const Nav = (): React.ReactElement => (
     <Stack.Screen 
       name='Payment' 
       component={Payment}/>
+    <Stack.Screen 
+      name='DoneOrder' 
+      component={DoneOrder}/>
   </Stack.Navigator>
 )
 export default Nav;
