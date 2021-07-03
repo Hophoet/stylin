@@ -8,14 +8,8 @@ import {AuthNavigator} from './auth.navigator';
 import Home from '../layouts/main/Home'
 import ProductDetail from '../layouts/main/ProductDetail'
 import Cart from '../layouts/main/Cart';
+import Shipping from '../layouts/main/Shipping';
 
-const HideStack = createStackNavigator();
-
-export const StackNavigator = (): React.ReactElement => (
-  <Stack.Navigator headerMode='none'>
-    <Stack.Screen name='ProductDetail' component={ProductDetail}/>
-  </Stack.Navigator>
-);
 
 function HomeScreen() {
   return (
@@ -25,13 +19,6 @@ function HomeScreen() {
   );
 }
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
 
 const Tab = createBottomTabNavigator();
 
@@ -130,6 +117,9 @@ const Nav = (): React.ReactElement => (
     <Stack.Screen 
       name='ProductDetail' 
       component={ProductDetail}/>
+    <Stack.Screen 
+      name='Shipping' 
+      component={Shipping}/>
   </Stack.Navigator>
 )
 export default Nav;
