@@ -11,6 +11,7 @@ import Cart from '../layouts/main/Cart';
 import Shipping from '../layouts/main/Shipping';
 import Payment from '../layouts/main/Payment';
 import DoneOrder from '../layouts/main/DoneOrder';
+import Favorite from '../layouts/main/Favorite';
 
 
 function HomeScreen() {
@@ -53,7 +54,7 @@ const Tab = createBottomTabNavigator();
       />
       <Tab.Screen
         name="Favorite" 
-        component={HomeScreen}
+        component={Favorite}
         options = {{
           tabBarLabel:'Favorite',
           tabBarIcon: ({color, size, focused}) => {
@@ -77,6 +78,7 @@ const Tab = createBottomTabNavigator();
 					let iconColor = (focused)?'black':'gray';
 					return (<Icon name={iconName} color={iconColor} size={iconSize} />);
 				},
+        tabBarBadge:'4'
 			}}
 		 />
 		<Tab.Screen
