@@ -1,18 +1,12 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
   Image,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
   FlatList
 } from "react-native";
-import { bgLinearGradient, sideBarLinearGradient} from '../../assets/colors/main';
 import CButton from '../../components/CButton';
 import ActionButton from '../../components/ActionButton';
 import {profileActionButtons} from '../../data/data'

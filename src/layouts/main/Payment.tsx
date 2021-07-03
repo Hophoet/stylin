@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
-  TouchableOpacity,
-  ImageBackground,
   ScrollView,
-  FlatList
 } from "react-native";
 import CButton from '../../components/CButton';
-import LabelTextInput from '../../components/LabelTextInput';
 import MainHeader from '../../components/MainHeader';
 
 

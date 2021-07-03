@@ -5,9 +5,6 @@ import CButton from '../../components/CButton';
 
 
 const Presentation = ({navigation}:any) => {
-	const navigateTo = (screen:string, data:any) => {
-		navigation.navigate(screen, data);
-	}
 
 	const navigateToSignIn = ()=>{
 		navigation.navigate('SignIn')

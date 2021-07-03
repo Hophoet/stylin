@@ -1,6 +1,4 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from "react-native-vector-icons/Ionicons";
 import { createStackNavigator } from '@react-navigation/stack';
@@ -14,14 +12,6 @@ import DoneOrder from '../layouts/main/DoneOrder';
 import Favorite from '../layouts/main/Favorite';
 import Profile from '../layouts/main/Profile';
 
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
 
 
 const Tab = createBottomTabNavigator();

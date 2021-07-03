@@ -1,18 +1,11 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
   FlatList
 } from "react-native";
-import { bgLinearGradient, sideBarLinearGradient} from '../../assets/colors/main';
-import HomeHeader from '../../components/HomeHeader';
 import ProductItem from '../../components/ProductItem';
 
 import {products} from '../../data/data'

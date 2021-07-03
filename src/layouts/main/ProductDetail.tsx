@@ -1,31 +1,20 @@
 import React, { useState, useEffect } from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
   TouchableOpacity,
   ImageBackground,
   ScrollView,
-  FlatList
 } from "react-native";
-import { bgLinearGradient, sideBarLinearGradient} from '../../assets/colors/main';
-import HomeHeader from '../../components/HomeHeader';
-import ProductItem from '../../components/ProductItem';
 import MainHeader from '../../components/MainHeader';
 import CButton from '../../components/CButton';
 import Icon from 'react-native-vector-icons/Ionicons'
 import CIconButton from '../../components/CIconButton';
 
-import {productCategories, productColors, productSizes} from '../../data/data'
-import { MenuItem } from "@ui-kitten/components";
+import {productColors, productSizes} from '../../data/data'
 
-const iconActions = [
-	{icon:'wifi', action:()=>{}},
-
-]
 
 const ProductDetail = ({navigation, route}:any) => {
   useEffect(() => {

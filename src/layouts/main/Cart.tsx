@@ -1,20 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
   FlatList
 } from "react-native";
 import CartProductItem from '../../components/CartProductItem';
 import CButton from '../../components/CButton';
 
-import {productCategories, products} from '../../data/data'
+import {products} from '../../data/data'
 
 
 const Cart = ({navigation}:any) => {

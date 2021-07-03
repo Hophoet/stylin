@@ -1,29 +1,21 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
   TouchableOpacity,
   ImageBackground,
   ScrollView,
   FlatList
 } from "react-native";
-import { bgLinearGradient, sideBarLinearGradient} from '../../assets/colors/main';
 import HomeHeader from '../../components/HomeHeader';
 import ProductItem from '../../components/ProductItem';
 
 import {productCategories, products} from '../../data/data'
 
-const iconActions = [
-	{icon:'wifi', action:()=>{}},
-
-]
 
 const Home = ({navigation}:any) => {
-  const [value, setValue] = useState("");
   const [selectedCategory, selectCategory] = useState(productCategories[0]);
 
   return (
@@ -105,6 +97,7 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
 	container:{
 		flex:1,
+    backgroundColor:'white',
 
 	},
   row1:{

@@ -5,9 +5,6 @@ import {ImageBackground, Text, View, StyleSheet, Dimensions} from 'react-native'
 import CButton from '../../components/CButton';
 
 const Presentation = ({navigation}:any) => {
-	const navigateTo = (screen:string, data:any={}) => {
-		navigation.navigate(screen, data);
-	}
 
 	const navigateNext = ()=>{
 		navigation.navigate('Presentation2')

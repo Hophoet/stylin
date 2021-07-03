@@ -1,8 +1,6 @@
 
 import React from 'react';
-import {ImageBackground, ScrollView, Text, View, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
-
-import CButton from '../../components/CButton';
+import {ScrollView, Text, View, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
 import CTextInput from '../../components/CTextInput';
 
 const ResetPasswordVerify = ({navigation}:any) => {

@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
-  SafeAreaView,
   StyleSheet,
   Dimensions,
   View,
   Text,
-  StatusBar,
   TouchableOpacity,
-  ImageBackground,
-  ScrollView,
-  FlatList
 } from "react-native";
 import CButton from '../../components/CButton';
-import LabelTextInput from '../../components/LabelTextInput';
 import MainHeader from '../../components/MainHeader';
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -31,7 +25,6 @@ const DoneOrder = ({navigation}:any) => {
           ),
         })
   }, [])
-  const [value, setValue] = useState("");
 
   return (
       <View style={styles.container}>

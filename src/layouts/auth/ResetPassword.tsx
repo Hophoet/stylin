@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {ImageBackground, ScrollView, Text, View, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
+import {ScrollView, Text, View, StyleSheet, Dimensions} from 'react-native'
 
 import CButton from '../../components/CButton';
 import CTextInput from '../../components/CTextInput';

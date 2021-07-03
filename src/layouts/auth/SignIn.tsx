@@ -8,9 +8,6 @@ import CTextInput from '../../components/CTextInput';
 
 const SignIn = ({navigation}:any) => {
   	const [termsAccepts, toggleTerms] = useState(false)
-	const navigateTo = (screen:string, data:any={}) => {
-		navigation.navigate(screen, data);
-	}
 
 	const navigateToSignUp = ()=>{
 		navigation.navigate('SignUp')
