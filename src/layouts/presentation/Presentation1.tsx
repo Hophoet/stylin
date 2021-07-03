@@ -28,7 +28,7 @@ const Presentation = ({navigation}:any) => {
 						Expore the new
 					</Text>
 					<Text style={styles.row1Description}>
-						world of CLothing
+						world of Clothing
 					</Text>
 				</View>
 				<View style={styles.row2}>
