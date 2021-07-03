@@ -89,10 +89,17 @@ const styles = StyleSheet.create({
 		padding:2,
 	},
 	imageBackgroundRow2:{
+		// backgroundColor:'black',
 		flexDirection:'row',
 		alignItems:'center',
 		justifyContent:'space-between',
 		paddingHorizontal:5,
+	},
+	imageBackgroundRow2Column1:{
+		flex:3
+	},
+	imageBackgroundRow2Column2:{
+		flex:1
 	},
 	heartButton:{
 		backgroundColor:'white',
@@ -107,6 +114,7 @@ const styles = StyleSheet.create({
 		fontWeight:'bold',
 	},
 	productPrice:{
+		fontSize:20,
 		color:'white',
 		fontWeight:'bold',
 
