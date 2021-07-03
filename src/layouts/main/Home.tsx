@@ -70,6 +70,7 @@ const Home = ({navigation}:any) => {
                 keyExtractor={(item) =>item.id.toString()}
                 renderItem={({item, index})=> (
                   <ProductItem 
+                    navigate={navigation.navigate}
                     width={width/2}
                     height={width/2}
                     item={item}/>
@@ -84,6 +85,7 @@ const Home = ({navigation}:any) => {
                 keyExtractor={(item) =>item.id.toString()}
                 renderItem={({item, index})=> (
                   <ProductItem 
+                    navigate={navigation.navigate}
                     width={width/2}
                     height={width/1}
                     item={item}/>
