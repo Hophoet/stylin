@@ -9,6 +9,7 @@ import Home from '../layouts/main/Home'
 import ProductDetail from '../layouts/main/ProductDetail'
 import Cart from '../layouts/main/Cart';
 import Shipping from '../layouts/main/Shipping';
+import Payment from '../layouts/main/Payment';
 
 
 function HomeScreen() {
@@ -120,6 +121,9 @@ const Nav = (): React.ReactElement => (
     <Stack.Screen 
       name='Shipping' 
       component={Shipping}/>
+    <Stack.Screen 
+      name='Payment' 
+      component={Payment}/>
   </Stack.Navigator>
 )
 export default Nav;
