@@ -1,9 +1,9 @@
 import React from 'react';
-import {TextInput, View, StyleSheet, Dimensions} from 'react-native'
+import {TextInput, Text, View, StyleSheet, Dimensions} from 'react-native'
 import Icon from "react-native-vector-icons/Ionicons";
 
 
-const CTextInput = ({icon, keyboardType, autoFocus, placeholderTextColor, selectionColor, iconColor, textInputStyle, textInputContainerStyle, placeholder}:any) => {
+const CTextInput = ({icon, label, keyboardType, autoFocus, placeholderTextColor, selectionColor, iconColor, textInputStyle, textInputContainerStyle, placeholder}:any) => {
 	return(
 		<View style={styles.container}>
 			<View style={[styles.textInputContainer, textInputContainerStyle]}>
