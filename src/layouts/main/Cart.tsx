@@ -11,9 +11,6 @@ import {
   ScrollView,
   FlatList
 } from "react-native";
-import { bgLinearGradient, sideBarLinearGradient} from '../../assets/colors/main';
-import HomeHeader from '../../components/HomeHeader';
-import ProductItem from '../../components/ProductItem';
 import CartProductItem from '../../components/CartProductItem';
 import CButton from '../../components/CButton';
 
@@ -44,10 +41,26 @@ const Cart = ({navigation}:any) => {
               />
         </View>
         <View style={styles.row3}>
+          <View style={styles.row3ContentContainer}>
+            <View style={styles.row3Row}>
+                  <Text style={styles.row3RowKey}>Total Amount</Text>
+                  <Text style={styles.row3RowValue}>$98</Text>
+            </View>
+            <View style={styles.row3Row}>
+                  <Text style={styles.row3RowKey}>Discount Amount</Text>
+                  <Text style={styles.row3RowValue}>$13</Text>
+            </View>
+            <View style={styles.row3Row}>
+                  <Text style={styles.row3RowKey}>Chipping Amount</Text>
+                  <Text style={styles.row3RowValue}>$9</Text>
+            </View>
+          </View>
+        </View>
+    <View style={styles.row4}>
             <CButton 
-                onPress={()=>{}}
+                onPress={()=>navigation.navigate('Shipping')}
                 iconPosition='left'
-                iconColor='white'
+                iconColor='4white'
                 label='Checkout'
                 textStyle={{color:'white'}}
                 buttonStyle={{backgroundColor:'black'}}/>
@@ -65,6 +78,7 @@ const styles = StyleSheet.create({
 	container:{
 		flex:1,
         paddingHorizontal:10,
+        backgroundColor:'white',
 
 	},
     row1:{
@@ -73,6 +87,8 @@ const styles = StyleSheet.create({
         justifyContent:'center',
     },
     row2:{
+      flex:4,
+      // backgroundColor:'aqua',
     },
     headerTitle:{
         fontSize:30,
@@ -80,5 +96,34 @@ const styles = StyleSheet.create({
     },
     itemsSeparator:{
         margin:5,
+    },
+    row3:{
+      // flex:1,
+      // backgroundColor:'blue',
+
+    },
+    row4:{
+      // flex:1,
+      // backgroundColor:'red',
+    },
+    row3ContentContainer:{
+      paddingHorizontal:10,
+      paddingVertical:20,
+      elevation:2,
+      backgroundColor:'white',
+      // backgroundColor:'red',
+      margin:10,
+    },
+    row3Row:{
+      flexDirection:'row',
+      justifyContent:'space-between',
+      alignItems:'center',
+    },
+    row3RowKey:{
+      fontSize:15,
+    },
+    row3RowValue:{
+      fontSize:18,
+      fontWeight:'bold',
     }
 })
