@@ -103,6 +103,7 @@ const ProductDetail = ({navigation, route}:any) => {
                     {
                         productSizes.map((item,index)=>(
                             <TouchableOpacity 
+                                key={index.toString()}
                                 onPress={()=>selectSize(item)}
                                 style={[styles.sizeButton,
                                    (selectedSize == item) &&{
