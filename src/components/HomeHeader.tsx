@@ -1,6 +1,6 @@
 
 import React from 'react'
-import {TextInput, StyleSheet, View , Text, Dimensions, TouchableOpacity} from 'react-native'
+import { StyleSheet, View, Dimensions, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 
@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 
 
-const HomeHeader = ({menus, activeMenu, setActiveMenu, sideBarVisible, toggleSideBar}:any) => {
+const HomeHeader = ({}:any) => {
 
 	return(
 		<View style={styles.container}>
@@ -18,17 +18,7 @@ const HomeHeader = ({menus, activeMenu, setActiveMenu, sideBarVisible, toggleSid
 				<TouchableOpacity
 					style={styles.iconButton}
 				>
-					<Icon style={styles.icon} size={25} name='search' color='gray' />
-				</TouchableOpacity>
-				<TouchableOpacity
-					style={styles.iconButton}
-				>
-					<Icon style={styles.icon} size={25} name='cart' color='gray' />
-				</TouchableOpacity>
-				<TouchableOpacity
-					style={styles.iconButton}
-				>
-					<Icon style={styles.icon} size={25} name='person' color='gray' />
+					<Icon  size={25} name='search' color='gray' />
 				</TouchableOpacity>
 			</View>
 		</View>

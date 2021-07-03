@@ -1,12 +1,7 @@
 
 import React, {useState} from 'react'
-import {TextInput, ImageBackground, Image, StyleSheet, View , Text, Dimensions, TouchableOpacity} from 'react-native'
+import {ImageBackground, StyleSheet, View , Text, Dimensions, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-
-
-
-
-
 
 const ProductItem = ({item, width, height, navigate}:any) => {
   const [isFavorite, toggleFavorite] = useState(true);

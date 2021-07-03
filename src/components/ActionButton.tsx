@@ -3,7 +3,7 @@ import {Text, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
 import Icon from "react-native-vector-icons/Ionicons";
 
 
-const ActionButton = ({item, onPress, iconPosition, buttonStyle, icon, textStyle, iconColor}:any) => {
+const ActionButton = ({item, onPress, buttonStyle, icon, textStyle, iconColor}:any) => {
 	return(
 		<TouchableOpacity 
             onPress={onPress}
