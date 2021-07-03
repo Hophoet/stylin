@@ -6,7 +6,16 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { createStackNavigator } from '@react-navigation/stack';
 import {AuthNavigator} from './auth.navigator';
 import Home from '../layouts/main/Home'
+import ProductDetail from '../layouts/main/ProductDetail'
+import Cart from '../layouts/main/Cart';
 
+const HideStack = createStackNavigator();
+
+export const StackNavigator = (): React.ReactElement => (
+  <Stack.Navigator headerMode='none'>
+    <Stack.Screen name='ProductDetail' component={ProductDetail}/>
+  </Stack.Navigator>
+);
 
 function HomeScreen() {
   return (
@@ -69,8 +78,8 @@ const Tab = createBottomTabNavigator();
       
       />
 		<Tab.Screen 
-			name="Scanner" 
-			component={HomeScreen}
+			name="Cart" 
+			component={Cart}
 		   	
 			options = {{
 				tabBarIcon: ({color, size, focused}) => {
@@ -103,9 +112,24 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const Nav = (): React.ReactElement => (
-  <Stack.Navigator headerMode='none'>
-    <Stack.Screen name='Auth' component={AuthNavigator}/>
-    <Stack.Screen name='App' component={App}/>
+  <Stack.Navigator 
+    // headerMode='none'
+    >
+    <Stack.Screen 
+			options={{
+				headerShown:false,
+			}}
+      name='Auth' 
+      component={AuthNavigator}/>
+    <Stack.Screen 
+			options={{
+				headerShown:false,
+			}}
+      name='App' 
+      component={App}/>
+    <Stack.Screen 
+      name='ProductDetail' 
+      component={ProductDetail}/>
   </Stack.Navigator>
 )
 export default Nav;
