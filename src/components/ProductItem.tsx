@@ -8,12 +8,16 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 
 
-const ProductItem = ({item, width, height}:any) => {
+const ProductItem = ({item, width, height, navigate}:any) => {
   const [isFavorite, toggleFavorite] = useState(true);
 
 	return(
 		<View style={[styles.container, {width:width, height:height}]}>
-			<View style={styles.row1}>
+			<TouchableOpacity 
+				onPress={()=>{
+					navigate('ProductDetail', {product:item})
+				}}	
+			style={styles.row1}>
 				<ImageBackground
 					style={styles.imageBackground}
 					source={item.image}
@@ -32,15 +36,15 @@ const ProductItem = ({item, width, height}:any) => {
 					</View>
 					<View style={styles.imageBackgroundRow2}>
 						<View style={styles.imageBackgroundRow2Column1}>
-							<Text style={styles.productName}>product name</Text>	
-							<Text style={styles.productCaracteristics}>product name</Text>	
+							<Text style={styles.productName}>{item.name}</Text>	
+							<Text numberOfLines={2} style={styles.productCaracteristics}>{item.caracteristics}</Text>	
 						</View>
 						<View style={styles.imageBackgroundRow2Column2}>
-							<Text style={styles.productPrice}>$79</Text>	
+							<Text style={styles.productPrice}>${item.price}</Text>	
 						</View>
 					</View>
 				</ImageBackground>
-			</View>
+			</TouchableOpacity>
 			<View style={styles.row2}>
 						<TouchableOpacity 
 							style={styles.footerButton}	
@@ -74,7 +78,7 @@ const styles = StyleSheet.create({
 	},
 	row2:{
 		flexDirection:'row',
-		backgroundColor:'white',
+		// backgroundColor:'white',
 		justifyContent:'space-between',
 		alignSelf:'flex-end',
 		paddingHorizontal:10,
@@ -111,7 +115,7 @@ const styles = StyleSheet.create({
 		color:'white',
 	},
 	footerButton:{
-		backgroundColor:'white',
+		// backgroundColor:'white',
 		padding:5,
 	},
 	})
