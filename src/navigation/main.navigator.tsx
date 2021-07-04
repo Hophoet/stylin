@@ -11,8 +11,36 @@ import Payment from '../layouts/main/Payment';
 import DoneOrder from '../layouts/main/DoneOrder';
 import Favorite from '../layouts/main/Favorite';
 import Profile from '../layouts/main/Profile';
+import UpdatePersonalInformations from '../layouts/main/UpdatePersonalInformations';
+import Orders from '../layouts/main/Orders';
 
 
+const Stack = createStackNavigator();
+
+const ProfileNav = (): React.ReactElement => (
+  <Stack.Navigator 
+    // headerMode='none'
+    >
+    <Stack.Screen 
+			options={{
+				headerShown:false,
+			}}
+      name='Profile' 
+      component={Profile}/>
+    <Stack.Screen 
+			options={{
+				// headerShown:false,
+			}}
+      name='UpdatePersonalInformations' 
+      component={UpdatePersonalInformations}/>
+    <Stack.Screen 
+			options={{
+				// headerShown:false,
+			}}
+      name='Orders' 
+      component={Orders}/>
+  </Stack.Navigator>
+)
 
 const Tab = createBottomTabNavigator();
 
@@ -74,7 +102,7 @@ const Tab = createBottomTabNavigator();
 		 />
 		<Tab.Screen
 			name="Profile" 
-			component={Profile}
+			component={ProfileNav}
 			
 			options = {{
 				tabBarLabel:'Profile',
@@ -91,7 +119,6 @@ const Tab = createBottomTabNavigator();
   );
 }
 
-const Stack = createStackNavigator();
 
 const Nav = (): React.ReactElement => (
   <Stack.Navigator 
