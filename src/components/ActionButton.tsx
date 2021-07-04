@@ -3,10 +3,17 @@ import {Text, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
 import Icon from "react-native-vector-icons/Ionicons";
 
 
-const ActionButton = ({item, onPress, buttonStyle, icon, textStyle, iconColor}:any) => {
+const ActionButton = ({item, onPress, navigate, buttonStyle, icon, textStyle, iconColor}:any) => {
 	return(
 		<TouchableOpacity 
-            onPress={onPress}
+            onPress={()=>{
+				if(item.code == 'upi'){
+					navigate('UpdatePersonalInformations')
+				}
+				else if(item.code == 'mo'){
+					navigate('Orders');
+				}
+			}}
             style={[styles.container, buttonStyle]}>
             <Text style={[styles.buttonLabel, textStyle]}>{item.name}</Text>
             { icon &&
