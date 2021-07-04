@@ -3,7 +3,7 @@ import {TextInput, View, StyleSheet, Dimensions} from 'react-native'
 import Icon from "react-native-vector-icons/Ionicons";
 
 
-const CTextInput = ({icon, label, keyboardType, autoFocus, placeholderTextColor, selectionColor, iconColor, textInputStyle, textInputContainerStyle, placeholder}:any) => {
+const CTextInput = ({icon, label, onChangeText, keyboardType, autoFocus, placeholderTextColor, selectionColor, iconColor, textInputStyle, textInputContainerStyle, placeholder}:any) => {
 	return(
 		<View style={styles.container}>
 			<View style={[styles.textInputContainer, textInputContainerStyle]}>
@@ -18,6 +18,7 @@ const CTextInput = ({icon, label, keyboardType, autoFocus, placeholderTextColor,
 					selectionColor={(selectionColor)?selectionColor:'white'}
 					style={[styles.textInput, textInputStyle]}
 					placeholder={placeholder}
+					onChangeText={(text)=>onChangeText(text)}
 				/>
 			</View>
 		</View> 
