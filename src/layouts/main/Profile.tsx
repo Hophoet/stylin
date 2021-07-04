@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
     },
     row4:{
       paddingVertical:20,
-      flex:1,
+      flex:1.3,
     }
 })
