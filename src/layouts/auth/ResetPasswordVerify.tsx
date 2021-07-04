@@ -1,9 +1,15 @@
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {ScrollView, Text, View, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
 import CTextInput from '../../components/CTextInput';
 
 const ResetPasswordVerify = ({navigation}:any) => {
+	const [code, setCode] = useState('');
+	useEffect(()=>{
+		if(code.length == 4){
+			navigation.navigate('SignIn');
+		}
+	},[code])	
 	const navigateToPasswordReset = ()=>{
 		navigation.navigate('ResetPassword')
 	}
@@ -20,6 +26,7 @@ const ResetPasswordVerify = ({navigation}:any) => {
 					<View style={styles.textInputsContainer}>
 						<View style={styles.textInputContainer}>
 							<CTextInput
+								onChangeText={setCode}
 								keyboardType='number-pad'
 								autoFocus={true}
 								iconColor='black'  
