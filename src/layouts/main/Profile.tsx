@@ -12,10 +12,7 @@ import ActionButton from '../../components/ActionButton';
 import {profileActionButtons} from '../../data/data'
 
 
-
-
 const Profile = ({navigation}:any) => {
-
   return (
       <View style={styles.container}>
         <View style={styles.row1}>
@@ -42,9 +39,9 @@ const Profile = ({navigation}:any) => {
             renderItem={({item, index})=>(
               <ActionButton 
                 icon={'arrow-forward'}
+                navigate={navigation.navigate}
                 item={item}/>
             )}
-
           />
         </View>
         <View style={styles.row4}>
@@ -55,7 +52,7 @@ const Profile = ({navigation}:any) => {
                   iconColor='white'
                   icon='log-out-outline' 
                   textStyle={{color:'white'}}
-                  buttonStyle={{backgroundColor:'black'}}/>
+                  buttonStyle={{backgroundColor:'black', paddingVertical:10,}}/>
         </View>
       </View>
   );
