@@ -2059,6 +2059,14 @@
   dependencies:
     "rsvp" "^4.8.4"
 
+"card-validator@^3.0.0":
+  "integrity" "sha1-3ML6vWoc0h82GyU2Qjpy3pmgiU8="
+  "resolved" "https://registry.npmjs.org/card-validator/-/card-validator-3.0.1.tgz"
+  "version" "3.0.1"
+  dependencies:
+    "credit-card-type" "^5.0.0"
+    "lodash" "3.10.1"
+
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz"
@@ -2347,6 +2355,11 @@
     "is-directory" "^0.3.1"
     "js-yaml" "^3.13.1"
     "parse-json" "^4.0.0"
+
+"credit-card-type@^5.0.0":
+  "integrity" "sha1-LdnfKAQRziu5Htlawx6BRgVxeu0="
+  "resolved" "https://registry.npmjs.org/credit-card-type/-/credit-card-type-5.0.4.tgz"
+  "version" "5.0.4"
 
 "cross-fetch@^3.0.4":
   "integrity" "sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ=="
@@ -4434,10 +4447,20 @@
   "resolved" "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz"
   "version" "4.5.0"
 
+"lodash.compact@^3.0.1":
+  "integrity" "sha1-VAzjg3dFl1gHRx4WtKK6IeclbKU="
+  "resolved" "https://registry.npmjs.org/lodash.compact/-/lodash.compact-3.0.1.tgz"
+  "version" "3.0.1"
+
 "lodash.debounce@^4.0.8":
   "integrity" "sha1-gteb/zCmfEAF/9XiUVMArZyk168="
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
+
+"lodash.every@^4.6.0":
+  "integrity" "sha1-64mYS+vENkJ5uzrvu9HKGb+mxqc="
+  "resolved" "https://registry.npmjs.org/lodash.every/-/lodash.every-4.6.0.tgz"
+  "version" "4.6.0"
 
 "lodash.frompairs@^4.0.1":
   "integrity" "sha1-vE5SB/onV8E25XNhTpZkUGsrG9I="
@@ -4499,10 +4522,20 @@
   "resolved" "https://registry.npmjs.org/lodash.truncate/-/lodash.truncate-4.4.2.tgz"
   "version" "4.4.2"
 
+"lodash.values@^4.3.0":
+  "integrity" "sha1-o6bCsOvsxcLLocF+bmIP6BtT00c="
+  "resolved" "https://registry.npmjs.org/lodash.values/-/lodash.values-4.3.0.tgz"
+  "version" "4.3.0"
+
 "lodash@^4.17.10", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.7.0":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
+
+"lodash@3.10.1":
+  "integrity" "sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y="
+  "resolved" "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
+  "version" "3.10.1"
 
 "log-symbols@^2.2.0":
   "integrity" "sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg=="
@@ -5498,7 +5531,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.7.2", "prop-types@15.7.2":
+"prop-types@^15.5.10", "prop-types@^15.6.0", "prop-types@^15.7.2", "prop-types@15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -5598,6 +5631,26 @@
     "node-emoji" "1.10.0"
     "prop-types" "15.7.2"
     "react-async-hook" "3.6.1"
+
+"react-native-credit-card-input@^0.4.1":
+  "integrity" "sha1-5i3Rqb7qtnh+U3O6I7k4Mcv1894="
+  "resolved" "https://registry.npmjs.org/react-native-credit-card-input/-/react-native-credit-card-input-0.4.1.tgz"
+  "version" "0.4.1"
+  dependencies:
+    "card-validator" "^3.0.0"
+    "lodash.compact" "^3.0.1"
+    "lodash.every" "^4.6.0"
+    "lodash.pick" "^4.4.0"
+    "lodash.values" "^4.3.0"
+    "prop-types" "^15.6.0"
+    "react-native-flip-card" "^3.4.1"
+
+"react-native-flip-card@^3.4.1":
+  "integrity" "sha512-lqsjl4vF5DyHD7mjBJpyBoaLKVxalzoKfCosE63QF+TaCF9MKdJrxmGFQj/i64GDiMJqeS/5sNDcICUXtgFsVA=="
+  "resolved" "https://registry.npmjs.org/react-native-flip-card/-/react-native-flip-card-3.5.6.tgz"
+  "version" "3.5.6"
+  dependencies:
+    "prop-types" "^15.5.10"
 
 "react-native-gesture-handler@*", "react-native-gesture-handler@^1.10.3", "react-native-gesture-handler@>= 1.0.0":
   "integrity" "sha512-cBGMi1IEsIVMgoox4RvMx7V2r6bNKw0uR1Mu1o7NbuHS6BRSVLq0dP34l2ecnPlC+jpWd3le6Yg1nrdCjby2Mw=="
