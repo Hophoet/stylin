@@ -8,11 +8,12 @@ import {
 } from "react-native";
 import CButton from '../../components/CButton';
 import MainHeader from '../../components/MainHeader';
+import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-input";
 
 
 const Payment = ({navigation}:any) => {
   useEffect(() => {
-        navigation.setOptions({
+	navigation.setOptions({
           header: () => (
             <MainHeader 
               firstAction={()=>{navigation.goBack()}}	
@@ -26,6 +27,10 @@ const Payment = ({navigation}:any) => {
   }, [])
   const [value, setValue] = useState("");
 
+  const _onChange = (value) => {
+	console.log(value);
+  }
+
   return (
       <View style={styles.container}>
         <View style={styles.row1}>
@@ -36,9 +41,7 @@ const Payment = ({navigation}:any) => {
           style={styles.scrollView}>
 
         <View style={styles.row2}>
-          <View style={styles.cart}>
-
-          </View>
+		  <CreditCardInput onChange={_onChange} />	
         </View>
       <View style={styles.row3}>
               <CButton 
@@ -70,7 +73,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
     },
     row2:{
-      // backgroundColor:'aqua',
+      //backgroundColor:'aqua',
     },
     row3:{
       paddingVertical:30,
