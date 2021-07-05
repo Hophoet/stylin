@@ -3,25 +3,39 @@ import React, {useEffect} from 'react';
 import {Text, View, StyleSheet, Dimensions} from 'react-native'
 
 
-const Splash = ({navigation}:any) => {
-	useEffect(()=> {
-		setTimeout(()=>{
-			navigation.navigate('Presentation1');
-		}, 3000)
+export default class Splash extends React.Component{
 
-	}, [])
+	constructor(props){
+		super(props)
+	}
+
+	componentDidMount(){
+		// Add event listener, when the the component on focus
+		this.props.navigation.addListener('focus', (e:any) => {
+			console.log('component focus')
+			setTimeout(()=>{
+				this.props.navigation.navigate('Presentation1');
+			}, 3000)
+		});
+
+	}
+
+	componentDidUpdate(){
+		console.log('component did mount')
+	}
 
 
-	return(
-		<View style={styles.container}>
-			<View style={styles.contentContainer}>
-				<Text style={styles.label}>Styl<Text style={styles.in}>In</Text></Text>
+	render(){
+		return(
+			<View style={styles.container}>
+				<View style={styles.contentContainer}>
+					<Text style={styles.label}>Styl<Text style={styles.in}>In</Text></Text>
+				</View>
 			</View>
-		</View>
-	)
+		)
+	}
 
 }
-export default Splash;
 
 const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
