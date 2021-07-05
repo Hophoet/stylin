@@ -40,6 +40,7 @@ const SignUp = ({navigation}:any) => {
 							<CTextInput
 								icon='person'	
 								placeholder='Username'
+								onChangeText={(text)=>{}}
 							/>
 						</View>
 						<View style={styles.textInputContainer}>
