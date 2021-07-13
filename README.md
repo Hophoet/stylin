@@ -1,4 +1,4 @@
-# React Native Activity Feed Example
+# StylIn, mobile app build in react-native to quick start your ecommerce project 
 
 StyIn, mobile app built using React Native,
 
