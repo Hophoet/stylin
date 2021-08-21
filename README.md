@@ -2,7 +2,10 @@
 
 StyIn, mobile app built using React Native,
 
+![LpF1FFXj jpg small](https://user-images.githubusercontent.com/52464453/130318527-6ab0f323-bf7e-4468-9054-986849e41a7e.jpeg)
 ![screenshots of example app](/src/assets/images/mockup.png)
+![rhjuhgst jpg small](https://user-images.githubusercontent.com/52464453/130318549-431265dd-cc76-4830-b105-bc0096376647.jpeg)
+
 
 ## Features
 
